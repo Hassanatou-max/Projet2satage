@@ -1,0 +1,565 @@
+:root {
+  --bg-color: #121212;
+  --card-bg: #1e1e1e;
+  --text-main: #ffffff;
+  --text-muted: #a0a0a0;
+  --accent-neon: #a3e635; /* Vert néon style Spotify/Figma */
+  --accent-neon-hover: #84cc16;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color:black; 
+  color: var(--text-main);
+  line-height: 1.6;
+  padding: 0 5%;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.logo {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--text-main);
+}
+
+/* Section Hero & About */
+.hero-section, .about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 4rem 0;
+  padding-top: 50px;
+}
+
+.hero-text h1, .about-header h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  margin-top: 20px;
+}
+
+.hero-image img, .about-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Boutons */
+.cta-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 50px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.8rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.btn-primary {
+  background-color: var(--accent-neon);
+  color: #000000;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-neon-hover);
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--card-bg);
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+/* Projets */
+.projects-section, .details-section {
+  padding: 4rem 0;
+}
+
+.projects-section h2, .details-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 60px;
+  align-items: start;
+}
+
+.project-img {
+  flex: 1;
+}
+
+.project-img img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.project-info h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.link-btn {
+  color: var(--accent-neon);
+  text-decoration: none;
+  font-weight: 600;
+}
+.project-desc {
+  color: #a0a0a0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* SECTION INFORMATIONS SUR LE PROJET */
+.project-meta {
+  border-top: 1px dashed #333333;
+  border-bottom: 1px dashed #333333;
+  padding: 15px 0;
+  margin-bottom: 25px;
+}
+
+.meta-title {
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  color: #ffffff;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.meta-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #a0a0a0;
+  margin-bottom: 8px;
+}
+
+.meta-row span:last-child {
+  color: #ffffff; /* Valeur à droite en blanc */
+}
+
+/* LIENS DEMO ET GITHUB */
+.project-links {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.project-links a {
+  font-size: 0.85rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding-bottom: 3px;
+}
+
+/* Style lien DÉMO avec soulignement vert néon */
+.link-demo {
+  color: #d4f82a; /* Vert néon */
+  border-bottom: 2px solid #d4f82a;
+}
+
+.link-demo i {
+  font-size: 0.8rem;
+}
+
+/* Style lien GITHUB avec soulignement vert néon */
+.link-github {
+  color: #d4f82a; /* Vert néon */
+  border-bottom: 2px solid #d4f82a;
+}
+
+.link-github i {
+  font-size: 1rem;
+}
+project-links a:hover {
+  opacity: 0.8;
+}
+
+/* --- SECTION À PROPOS DE MOI--- */
+.about-section {
+  max-width: 1000px;
+  margin: 0 auto 60px auto;
+  display: flex;
+  flex-direction: column; /* Force l'image à se placer sous le texte */
+  gap: 30px;
+}
+
+.about-top {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Titre à gauche, texte à droite */
+  gap: 30px;
+  align-items: start;
+}
+
+/* Diminuer la taille du titre "À PROPOS DE MOI" */
+.about-top .section-title {
+  font-size: 1.8rem; /* Taille réduite */
+  font-weight: 800;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.about-text .subtitle {
+  font-weight: bold;
+  font-size: 1.05rem;
+  margin-top: 0;
+  color: #ffffff;
+}
+
+.about-text .description {
+  color: #a0a0a0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 15px 0;
+}
+
+/* Alignement du bouton CV et des icônes */
+.about-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.btn-cv {
+  background-color: #d4f82a; /* Couleur vert néon */
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.85rem;
+  padding: 10px 22px;
+  border-radius: 25px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.2s ease;
+}
+
+.btn-cv:hover {
+  transform: translateY(-2px);
+}
+
+.social-icons-row {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons-row a {
+  color: #ffffff;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icons-row a:hover {
+  color: #d4f82a;
+}
+
+/* Conteneur de l'image centrée sous le texte */
+.about-image-container {
+  width: 100%;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.about-img {
+  width: 100%;
+  max-width: 500px; /* Ajuste la largeur de la photo */
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* --- SECTION MES COMPÉTENCES --- */
+.skills-section {
+  max-width: 1000px;
+  margin: 0 auto 60px auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+}
+
+.skills-content p {
+  color: var(--text-gray);
+  font-size: 0.9rem;
+  margin-top: 0;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.skills-grid span {
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+/* --- SECTION MON EXPÉRIENCE --- */
+.experience-section {
+  max-width: 1000px;
+  margin: 0 auto 60px auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+}
+
+.experience-container {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 20px;
+}
+
+.exp-item {
+  margin-bottom: 25px;
+}
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.exp-header h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.exp-date {
+  color: var(--text-gray);
+  font-size: 0.8rem;
+}
+
+.exp-sub {
+  color: var(--accent-color);
+  font-size: 0.85rem;
+  margin: 4px 0;
+}
+
+.exp-item p {
+  color: var(--text-gray);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+/* --- SECTION ENTRONS EN CONTACT --- */
+.contact-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.contact-desc {
+  color: var(--text-gray);
+  font-size: 0.9rem;
+}
+
+.contact-socials {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.contact-socials a {
+  color: var(--text-white);
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-socials a:hover {
+  color: var(--accent-color);
+}
+
+/* Formulaire */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #333;
+  padding: 10px 0;
+  color: var(--text-white);
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-bottom-color: var(--accent-color);
+}
+
+.btn-submit {
+  background-color: var(--accent-color);
+  color: #000;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  align-self: flex-start;
+  margin-top: 10px;
+}
+.btn-submit {
+  background-color: #00adb5; /* Remplace par ta couleur d'accentuation (bleu/vert) */
+  color: #ffffff;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 15px;
+}
+
+.btn-submit:hover {
+  background-color: #00888e; /* Teinte un peu plus foncée au survol */
+  transform: translateY(-2px);
+}
+
+.btn-submit:active {
+  transform: translateY(0);
+}
+ /* --- COULEURS SECTION CONTACT --- */
+
+/* 1. Icônes des réseaux sociaux en jaune/vert néon */
+.contact-socials a {
+  color: #d4f82a; /* Remplace le blanc par le jaune/vert néon */
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.contact-socials a:hover {
+  opacity: 0.8;
+}
+
+/* 2. Bouton Envoyer en jaune/vert néon avec texte noir */
+.btn-submit {
+  background-color: #d4f82a; /* Remplace le bleu par le jaune/vert néon */
+  color: #000000;             /* Texte noir pour un bon contraste */
+  padding: 10px 25px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+.btn-submit:hover {
+  background-color: #c2e622; /* Teinte légèrement plus foncée au survol */
+  transform: translateY(-2px);
+}
+
+/* Container global des informations du projet */
+.project-info {
+  border-top: 1px solid #333333; /* Ligne tout en haut, au-dessus de "Année" */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Chaque ligne (Année, Rôle, etc.) */
+.project-info-row {
+  display: flex;
+  justify-content: space-between; /* Aligne l'étiquette à gauche et la valeur à droite */
+  align-items: center;
+  padding: 12px 0; /* Espace vertical */
+  border-bottom: 1px solid #333333; /* Ligne sous "Année" ET sous "Rôle" */
+}
+
+.project-info-row .label {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.project-info-row .value {
+  color: #a0a0a0;
+}
+.vue{
+  color: #c2e622;
+}
+.p{
+  background-color: #000;
+}
+
+  .v{
+    background-color: #000;
+    color: #a0a0a0;
+  }
+ 
